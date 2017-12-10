@@ -4,9 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Calculator 🤓</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  hello world!
-</body>
+  <div class="container">
+
+    <h1 class="title">JS Calculator</h1>
+    <div class="calculator-body">
+      <div class="calculator-title">
+        <h1>Casio 3000</h1>
+      </div>
+      <div class="screen text-right">
+        <div id='input'>
+          <p id='answer'>0</p>
+        </div>
+        <div id='history'>
+          <p>0</p>
+        </div>
+      </div>
+      <!-- 
+        <div class="buttons-container">
+          <div class="btn"><p>AC</p></div>
+          <div class="btn"><p>CE</p></div>
+          <div class="btn"><p>/</p></div>
+          <div class="btn"><p>X</p></div>
+        </div> -->
+        
+        <div class="buttons-container">
+          <button value="ac">AC</button>
+          <button value="ce">CE</button>
+          <button value="/">&divide;</button>
+          <button value="*">X</button>
+
+          <button value="7">7</button>
+          <button value="8">8</button>
+          <button value="9">9</button>
+          <button value="-">-</button>
+          
+          <button value="4">4</button>
+          <button value="5">5</button>
+          <button value="6">6</button>
+          <button value="+">+</button>
+          
+          <button value="1">1</button>
+          <button value="2">2</button>
+          <button value="3">3</button>
+          <button class="invisible">N</button>
+          
+          <button id='zeroButton' value='0'>0</button>
+          <button value='.'>.</button>
+          <button id='equalButton' value='='>=</button>
+        </div>  
+      </div>
+    </div>
+  </body>
 </html>

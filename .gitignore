@@ -60,3 +60,5 @@ typings/
 # sass cache
 .sass-cache/
 
+# sass map
+css/style.css.map

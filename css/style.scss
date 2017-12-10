@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Rubik:300,400,700");
+
+@mixin prefix($prop, $val) {
+  @each $prefix in "-webkit-", "-moz-", "-ms-", "" {
+    #{$prefix}#{$prop}: $val;
+  }
+}
+
+//fons
+$pacifico: Pacifico;
+$rubik: Rubik;
+
+//colors
+$red: #fe1662;
+$blue: #2b2e48;
+$gray: #404040;
+
+body {
+  font-family: $rubik;
+  background-color: $blue;
+  // margin: 20px;
+}
+
+.title {
+  font-family: $pacifico;
+  color: $red;
+  text-align: center;
+  font-size: 5em;
+  letter-spacing: 0.2rem;
+}
+
+.calculator-body {
+  width: 300px;
+  height: 410px;
+  margin: 10% auto;
+  position: relative;
+  @include prefix(box-shadow, 10px 10px 0 rgba(0, 0, 0, 0.1));
+  background-color: darken($blue, 10%);
+  border-radius: 20px;
+  // padding: 20px;
+  // display: block;
+  // flex-direction: row;
+  // justify-content: space-around;
+  // align-items: center;
+  // text-align: center;
+}
+
+.calculator-title {
+  // margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  // position: relative;
+  text-align: right;
+  h1 {
+    font-family: $rubik;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    margin-right: 15px;
+  }
+}
+
+.screen {
+  width: 85%;
+  // width: auto;
+  height: 65px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid white;
+  border-radius: 6px;
+  background-color: darken(white, 15%);
+}
+
+#input {
+  margin-right: 10px;
+  font-size: 35px;
+}
+
+#history {
+  position: relative;
+  height: 10px;
+  bottom: 17px;
+  margin-right: 14px;
+  color: #8b8b7b;
+  font-size: 12px;
+}
+
+.buttons-container {
+  position: absolute;
+  display: inline-block;
+  width: 280px;
+  height: auto;
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 1.2em;
+  color: white;
+}
+
+button {
+  @include prefix(border-radius, 8px);
+  // border: none;
+  margin: 0 4px 10px 8px;
+  height: 40px;
+  width: 50px;
+  background-color: $red;
+  // box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
+  border: 2px solid darken($red, 10%);
+  @include prefix(box-shadow, 3px 3px 0 darken($red, 40%));
+  @include prefix(box-shadow, 0px 3px 0px 0px darken($red, 60%));
+  // @include prefix(box-shadow, inset -1px -3px 10px 1px darken($red, 20%));
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translate(0px, 3px);
+    border: 2px solid $red;
+    box-shadow: none;
+    // @include prefix(box-shadow, 3px 3px 0 $red);
+    // @include prefix(box-shadow, 0px 3px 0px 0px $red);
+    // @include prefix(box-shadow, 3px 3px 0 $red);
+  }
+
+  &,
+  &:hover,
+  &:active,
+  &:visited {
+    text-decoration: none !important;
+    outline: none !important;
+  }
+}
+
+#equalButton {
+  position: absolute;
+  margin-left: 12px;
+  margin-top: -50px;
+  height: 90px;
+}
+
+#zeroButton {
+  width: 117px;
+}
